@@ -1,0 +1,126 @@
+:root {
+    --colors-pink-100: #fc758c;
+    --colors-gray-100: #707070;
+    --colors-gray-50: #f6f6f6;
+    --colors-white: #ffffff;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Header-wrapper {
+    background-color: var(--colors-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.Header-logo {
+    align-self: center;
+}
+
+.Header-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Header-menu-button{
+    width: 40px;
+    height: 40px;
+    background: url('./assets/images/icon-hamburger.svg') no-repeat center;
+}
+
+.Header-menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.Header-menu-checkbox {
+    display: none;
+}
+
+.Header-menu-checkbox:checked ~ .Header-menu-button {
+    background: url('./assets/images/icon-close.svg') no-repeat center;
+}
+
+.Header-menu-checkbox:checked ~ .Header-menu {
+    display: block;
+    position: absolute;
+    top: 18%;
+    padding: 1em;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--colors-pink-100) 0%, transparent 90%);
+}
+
+.Header-menu-checkbox:checked ~ .Header-menu-item:first-of-type a {
+    padding-top: 2em;
+    border-radius: .5em .5em 0 0;
+}
+
+.Header-menu-checkbox:checked ~ .Header-menu-item:last-of-type a {
+    padding-top: 2em;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.Header-menu-checkbox:checked ~ .Header-menu a {
+    background-color: var(--colors-white);
+    padding: .8em 1em;
+    color: var(--colors-gray-100);
+    display: block;
+    text-align: center;
+    flex: 1;
+}
+
+.Header-menu-checkbox:checked ~ .Header-menu .Header-menu-checkbox--active a{
+    background-color: var(--colors-pink-100);
+    color: var(--colors-white);
+    border: 1px solid;
+}
+
+.slider-container {
+    background-color: var(--colors-pink-100);
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.slider-container h1 {
+    color: var(--colors-white);
+    margin-bottom: 15px;
+}
+
+.slider-container p {
+    color: var(--colors-white);
+}
+
+.btn {
+    width: 172px;
+    height: 41px;
+    padding: 1em;
+    margin: 15px auto 0 auto;
+}
+
+.btn--secondary {
+    border: none;
+    color: var(--colors-pink-100);
+    text-transform: uppercase;
+}
