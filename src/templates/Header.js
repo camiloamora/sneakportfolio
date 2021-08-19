@@ -27,7 +27,7 @@ const Header = () => {
                         <a href="">
                             <img src=${iconFind} alt="find" />
                         </a>
-                    </li
+                    </li>
                 </ul>
             </nav>
             <label for="menu" class="Header-menu-button"></label>
