@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -117,6 +117,9 @@ a {
     border: 1px solid;
 }
 
+.menuIntern-container {
+    margin-bottom: 76px;
+}
 
 .slider-container {
     background-color: var(--colors-pink-100);
@@ -130,11 +133,15 @@ a {
 
 .slider-container h1 {
     color: var(--colors-white);
-    margin-bottom: 15px;
+    margin-bottom: 1em;
+    font-size: 2em;
+    letter-spacing: .2em;
 }
 
 .slider-container p {
     color: var(--colors-white);
+    font-size: .8em;
+    margin-bottom: 2em;
 }
 
 .btn {
@@ -142,10 +149,159 @@ a {
     height: 41px;
     padding: 1em;
     margin: 15px auto 0 auto;
+    cursor: pointer;
 }
 
 .btn--secondary {
     border: none;
     color: var(--colors-pink-100);
     text-transform: uppercase;
+    background-color: var(--colors-white);
 }
+
+.btn--primary {
+    border: none;
+    color: var(--colors-white);
+    background-color: var(--colors-pink-100);
+}
+
+.gallery {
+    max-width: 300px;
+    margin: 76px auto 0px auto;
+    overflow: hidden;
+}
+
+.gallery-container{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.gallery-button {
+    text-align: center;
+    margin: 40px 0px 76px 0px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer span {
+    color: var(--colors-pink-100);
+}
+
+.footer p {
+    color: var(--colors-gray-100);
+}
+
+.footer-brands {
+    display: grid;
+    grid-template-columns: repeat(5, 25px);
+    grid-column-gap: 1em;
+    justify-content: center;
+    margin: 2.5em 0;
+}
+
+.icon_facebook {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-image: url('./assets/images/icon_facebook.png');
+}
+
+.icon_twitter {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-image: url('./assets/images/icon_tweeter.png');
+}
+
+.icon_dribble {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-image: url('./assets/images/icon_dribble.png');
+}
+
+
+.icon_google {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-image: url('./assets/images/icon_gmail.png');
+}
+
+.icon_youtube {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-image: url('./assets/images/icon_youtube.png');
+}
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        max-width: 700px;
+        margin: 76px auto 0px auto;
+        overflow: hidden;
+    }
+
+    .gallery-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Header-menu {
+        display: flex;
+    }
+
+    .Header-menu-button {
+        display: none;
+    }
+
+    .Header-menu--inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Header-menu-item a {
+        background-color: var(--colors-white);
+        padding: .8em 1em;
+        color: var(--colors-gray-100);
+        display: block;
+        text-align: center;
+        flex: 1;
+    }
+
+    .Header-menu-checkbox--active a{
+        background-color: var(--colors-pink-100);
+        color: var(--colors-white);
+        border: 1px solid;
+    }
+
+    .gallery {
+        max-width: 1100px;
+        margin: 76px auto 0px auto;
+        overflow: hidden;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .gallery {
+        max-width: 1117px;
+    }
+
+    .gallery-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* .gallery-item:nth-child(11n+1) {
+    grid-column: span 1;
+  } */
