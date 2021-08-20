@@ -4,10 +4,10 @@ import iconFind from '../assets/images/icon_find.png'
 const Header = () => {
     const view = `
         <div class="Header-wrapper">
-            <img src=${logo} alt="sneak portfolio" class="Header-logo" />
+            <img src=${logo} alt="sneak portfolio" class="Header-logo" width="184" />
             <input type="checkbox" id="menu" class="Header-menu-checkbox">
             <nav class="Header-menu">
-                <ul>
+                <ul class="Header-menu--inline">
                     <li class="Header-menu-item Header-menu-checkbox--active">
                         <a href="">All</a>
                     </li>
