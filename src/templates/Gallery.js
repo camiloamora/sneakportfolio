@@ -2,7 +2,6 @@ import getData from "../utils/GetData";
 
 const Gallery = async () => {
     const photos = await getData();
-    console.log(photos);
     const view = `
         <div class="gallery-container">    
             ${photos.map(photo => ` 
